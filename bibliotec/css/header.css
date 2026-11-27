@@ -1,0 +1,89 @@
+/* HEADER */
+
+header {
+    min-height: 85px;
+    padding: 18px 5%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    font-family: 'Cinzel', serif;
+
+    background: #102D50;
+    border-bottom: 3px solid #FFD43B;
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* LOGOTIPO */
+header h1 {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(1.7rem, 4vw, 2.2rem);
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #FFFFFF;
+}
+
+header h1 span {
+    color: #FFD43B;
+}
+
+/* MENU */
+header nav {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+header nav a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+header nav a:hover {
+    color: #FFD43B;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 750px) {
+    header {
+        flex-direction: column;
+        justify-content: center;
+        gap: 15px;
+        padding: 16px 5%;
+    }
+
+    header h1 {
+        font-size: 27px;
+    }
+
+    header nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 18px;
+    }
+
+    header nav a {
+        font-size: 14px;
+    }
+}
+
+/* CELULARES PEQUENOS */
+@media (max-width: 400px) {
+    header nav {
+        gap: 12px;
+    }
+
+    header nav a {
+        font-size: 13px;
+    }
+}

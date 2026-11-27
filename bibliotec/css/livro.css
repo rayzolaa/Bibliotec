@@ -1,0 +1,510 @@
+
+/* CONFIGURAÇÕES GERAIS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background-color: #F4F6FA;
+    color: #183153;
+}
+
+
+
+/* ÁREA PRINCIPAL */
+main {
+    padding: 50px 20px;
+}
+
+/* CARD DO PRODUTO */
+.produto {
+    background-color: #FFFFFF;
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    padding: 40px;
+    border-radius: 16px;
+
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    column-gap: 40px;
+    row-gap: 30px;
+
+    position: relative;
+
+    box-shadow: 0 5px 25px rgba(16, 45, 80, 0.10);
+    transition: 0.3s;
+}
+
+.produto:hover {
+    box-shadow: 0 10px 30px rgba(16, 45, 80, 0.16);
+    transform: translateY(-4px);
+}
+
+/* IMAGEM DO LIVRO */
+.produto img {
+    grid-column: 1;
+    grid-row: 1;
+
+    width: 280px;
+    height: 410px;
+    object-fit: cover;
+    border-radius: 10px;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.18);
+}
+
+/* TÍTULO DO LIVRO */
+.produto > h2 {
+    grid-column: 2;
+    grid-row: 1;
+
+    font-size: 35px;
+    color: #102D50;
+    font-weight: 700;
+    margin-bottom: 20px;
+
+    padding-bottom: 12px;
+}
+
+/* FICHA TÉCNICA */
+.fichatec {
+    grid-column: 2;
+    grid-row: 1;
+
+    margin-top: 65px;
+    width: 100%;
+}
+
+.fichatec h2,
+.sinopse h2 {
+    font-size: 19px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #102D50;
+
+    border-left: 5px solid #FFD43B;
+    padding: 10px 14px;
+
+    margin-bottom: 18px;
+    background-color: #F1F5FA;
+}
+
+/* ORGANIZAÇÃO DAS INFORMAÇÕES */
+.fichatec p {
+    display: grid;
+    grid-template-columns: 190px 1fr;
+    gap: 10px;
+
+    color: #596575;
+    font-size: 14px;
+    line-height: 1.8;
+    padding: 5px 12px;
+}
+
+.fichatec strong {
+    color: #102D50;
+}
+
+/* SINOPSE */
+.sinopse {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    width: 100%;
+    margin-top: 5px;
+}
+
+.descricao {
+    color: #596575;
+    font-size: 14px;
+    line-height: 1.9;
+    text-align: justify;
+
+    background-color: #F1F5FA;
+    border-left: 5px solid #FFD43B;
+    padding: 20px;
+    border-radius: 4px;
+}
+
+/* PREÇO */
+.preco {
+    grid-column: 1 / -1;
+    color: #102D50;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+/* BOTÃO COMPRAR */
+.comprar {
+    grid-column: 1 / -1;
+    justify-self: start;
+
+    background-color: #FFD43B;
+    color: #102D50;
+    border: none;
+    padding: 14px 30px;
+    border-radius: 8px;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.comprar:hover {
+    background-color: #E8B900;
+    transform: scale(1.04);
+}
+
+/* CARRINHO */
+.carrinho {
+    top: 40px;
+    right: 20px;
+}
+
+.carrinho button {
+    background-color: #FFD43B;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.carrinho button:hover {
+    background-color: #E8B900;
+    transform: scale(1.1);
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 750px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .logo {
+        font-size: 27px;
+    }
+
+    header button {
+        padding: 10px;
+        font-size: 13px;
+    }
+
+    main {
+        padding: 25px 10px;
+    }
+
+    .produto {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 25px;
+        gap: 20px;
+    }
+
+    .produto img {
+        width: 210px;
+        height: 310px;
+    }
+
+    .produto > h2 {
+        width: 100%;
+        font-size: 28px;
+        margin-bottom: 0;
+    }
+
+    .fichatec {
+        width: 100%;
+        margin-top: 0;
+    }
+
+    .fichatec p {
+        grid-template-columns: 1fr;
+        gap: 2px;
+        line-height: 1.6;
+    }
+
+    .fichatec strong {
+        margin-top: 8px;
+    }
+
+    .sinopse {
+        width: 100%;
+    }
+
+    .descricao {
+        text-align: left;
+    }
+
+    .preco {
+        width: 100%;
+    }
+
+    .comprar {
+        width: 100%;
+    }
+
+    .carrinho {
+        top: 12px;
+        right: 12px;
+    }
+}
+.avaliacao {
+  color: gold;
+  font-size: 22px;
+}
+.botoes {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* =====================================
+   AVALIAÇÕES DOS LEITORES
+===================================== */
+
+.avaliacoes {
+    grid-column: 1 / -1;
+    width: 100%;
+    margin-top: 35px;
+    padding-top: 30px;
+    border-top: 2px solid #E0E6EF;
+}
+
+.avaliacoes > h2 {
+    font-size: 24px;
+    color: #102D50;
+    margin-bottom: 25px;
+    border-left: 5px solid #FFD43B;
+    padding: 10px 14px;
+    background-color: #F1F5FA;
+}
+
+.resumo-avaliacoes {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 35px;
+    padding: 25px;
+    background-color: #F1F5FA;
+    border-radius: 12px;
+    margin-bottom: 35px;
+}
+
+.nota-geral {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid #D5DCE5;
+    padding-right: 20px;
+}
+
+.nota-geral strong {
+    font-size: 48px;
+    color: #102D50;
+}
+
+.nota-geral span {
+    font-size: 19px;
+}
+
+.nota-geral p {
+    font-size: 12px;
+    color: #596575;
+    margin-top: 8px;
+}
+
+.distribuicao {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px;
+}
+
+.barra-nota {
+    display: grid;
+    grid-template-columns: 45px 1fr 40px;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    color: #183153;
+}
+
+.barra-nota div {
+    height: 10px;
+    background-color: #DCE3EC;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.barra-nota div span {
+    display: block;
+    height: 100%;
+    background-color: #FFD43B;
+    border-radius: 20px;
+}
+
+.avaliacoes h3 {
+    color: #102D50;
+    font-size: 19px;
+    margin-bottom: 20px;
+}
+
+.lista-avaliacoes {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.comentario {
+    background-color: #F8FAFD;
+    border: 1px solid #E0E6EF;
+    padding: 20px;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.comentario:hover {
+    border-color: #FFD43B;
+    transform: translateY(-2px);
+}
+
+.comentario-topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.comentario-topo strong {
+    color: #102D50;
+    font-size: 15px;
+}
+
+.positivo,
+.negativo {
+    font-size: 11px;
+    font-weight: bold;
+    padding: 6px 10px;
+    border-radius: 20px;
+}
+
+.positivo {
+    color: #18794E;
+    background-color: #DDF5E8;
+}
+
+.negativo {
+    color: #B42318;
+    background-color: #FDE8E7;
+}
+
+.estrelas {
+    font-size: 17px;
+    margin: 12px 0;
+}
+
+.comentario h4 {
+    color: #102D50;
+    margin-bottom: 8px;
+}
+
+.comentario p {
+    color: #596575;
+    font-size: 14px;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+/* FORMULÁRIO */
+
+.nova-avaliacao {
+    background-color: #F1F5FA;
+    padding: 25px;
+    border-radius: 12px;
+    margin-top: 35px;
+}
+
+.nova-avaliacao form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.nova-avaliacao label {
+    color: #102D50;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.nova-avaliacao input,
+.nova-avaliacao select,
+.nova-avaliacao textarea {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #D5DCE5;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+}
+
+.nova-avaliacao input:focus,
+.nova-avaliacao select:focus,
+.nova-avaliacao textarea:focus {
+    border-color: #FFD43B;
+}
+
+.nova-avaliacao textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.nova-avaliacao button {
+    background-color: #FFD43B;
+    color: #102D50;
+    border: none;
+    padding: 14px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.nova-avaliacao button:hover {
+    background-color: #E8B900;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 750px) {
+
+    .resumo-avaliacoes {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .nota-geral {
+        border-right: none;
+        border-bottom: 1px solid #D5DCE5;
+        padding: 0 0 20px;
+    }
+
+    .comentario p {
+        text-align: left;
+    }
+
+}

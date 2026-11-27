@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIBLIOTEC - Carrinho</title>
+
+    <link rel="stylesheet" href="../bibliotec/css/carrinho.css">
+    <link rel="stylesheet" href="../bibliotec/css/header.css">
+    <link rel="stylesheet" href="../bibliotec/css/footer.css">
+</head>
+<body>
+
+    <header>
+        <h1>BIBLIOTEC<span>✦</span></h1>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="catalogo.html">Catálogo</a>
+            <a href="carrinho.html">Carrinho</a>
+        </nav>
+    </header>
+        
+<main class="pagina">
+
+    <h2 class="titulo-pagina">Meu Carrinho</h2>
+
+    <section id="itens-carrinho" class="itens-carrinho">
+
+        <div class="item-carrinho">
+            <img src="../bibliotec/assets/pequenoprincipe.jpg" alt="O Pequeno Príncipe">
+
+            <div>
+                <h3>O Pequeno Príncipe</h3>
+                <p>Antoine de Saint-Exupéry</p>
+                <p>R$ 38,90</p>
+            </div>
+
+            <button class="remover-item" onclick="removerLivro(this)">
+                Remover
+            </button>
+        </div>
+
+        <div class="item-carrinho">
+            <img src="../bibliotec/assets/Orgulho.jpg" alt="Orgulho e Preconceito">
+
+            <div>
+                <h3>Orgulho e Preconceito</h3>
+                <p>Jane Austen</p>
+                <p>R$ 59,90</p>
+            </div>
+
+            <button class="remover-item" onclick="removerLivro(this)">
+                Remover
+            </button>
+        </div>
+
+        <div class="item-carrinho">
+            <img src="../bibliotec/assets/estrelas.jpg" alt="A Culpa é das Estrelas">
+
+            <div>
+                <h3>A Culpa é das Estrelas</h3>
+                <p>John Green</p>
+                <p>R$ 39,90</p>
+            </div>
+
+            <button class="remover-item" onclick="removerLivro(this)">
+                Remover
+            </button>
+        </div>
+
+    </section>
+
+    <div class="resumo-carrinho">
+        <h3 id="total-carrinho">Total: R$ 138,70</h3>
+
+        <button id="limpar-carrinho" onclick="limparCarrinho()">
+            Limpar carrinho
+        </button>
+    </div>
+
+</main>
+
+    <footer class="rodape">
+        <p class="copyright">
+            &copy; 2026 Bibliotec. Todos os direitos reservados.
+        </p>
+    </footer>
+
+    <script src="../bibliotec/js/scripts.js"></script>
+</body>
+</html>

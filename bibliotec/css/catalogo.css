@@ -1,0 +1,189 @@
+
+/* =====================================
+   CATÁLOGO - BIBLIOTEC
+===================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f4f6f9;
+    font-family: Arial, sans-serif;
+    color: #102D50;
+
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* CONTEÚDO */
+
+.pagina {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+    flex: 1;
+}
+
+/* INTRODUÇÃO */
+
+.introducao {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.introducao h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 32px;
+    color: #102D50;
+    margin-bottom: 12px;
+}
+
+.introducao p {
+    color: #666;
+    font-size: 16px;
+}
+
+/* PESQUISA */
+
+.pesquisa {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.pesquisa input {
+    width: 100%;
+    max-width: 550px;
+    padding: 14px 18px;
+
+    border: 1px solid #ccc;
+    border-radius: 8px;
+
+    font-size: 15px;
+    outline: none;
+}
+
+.pesquisa input:focus {
+    border-color: #102D50;
+}
+
+/* GRADE DE GÊNEROS */
+
+.catalogo {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+/* CARD */
+
+.genero {
+    background-color: white;
+    padding: 28px 22px;
+
+    border-radius: 12px;
+    text-align: center;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+
+    transition: 0.3s;
+}
+
+.genero:hover {
+    transform: translateY(-6px);
+
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+/* ÍCONE */
+
+.icone-genero {
+    width: 65px;
+    height: 65px;
+
+    margin: 0 auto 18px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #102D50;
+    color: #FFD43B;
+
+    border-radius: 50%;
+
+    font-size: 30px;
+}
+
+/* TEXTOS */
+
+.genero h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 20px;
+
+    margin-bottom: 12px;
+}
+
+.genero p {
+    color: #777;
+    font-size: 14px;
+    line-height: 1.6;
+
+    min-height: 67px;
+    margin-bottom: 22px;
+}
+
+/* LINK */
+
+.genero a {
+    display: inline-block;
+
+    width: 100%;
+    padding: 12px;
+
+    background-color: #102D50;
+    color: white;
+
+    text-decoration: none;
+    border-radius: 7px;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.genero a:hover {
+    background-color: #FFD43B;
+    color: #102D50;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 900px) {
+
+    .catalogo {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .catalogo {
+        grid-template-columns: 1fr;
+    }
+
+    .introducao h1 {
+        font-size: 26px;
+    }
+
+    .pagina {
+        width: 92%;
+    }
+
+}

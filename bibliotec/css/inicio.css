@@ -1,0 +1,325 @@
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --fundo: #ffffff;
+    --fundo-card: #FFFFFF;
+    --fundo-card-hover: #F1F5FA;
+    --azul: #102D50;
+    --azul-escuro: #183153;
+    --amarelo: #FFD43B;
+    --texto: #183153;
+    --texto-secundario: #596575;
+    --borda: rgba(16, 45, 80, 0.12);
+}
+
+/* PÁGINA */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: var(--fundo);
+    color: var(--texto);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+
+/* TÍTULOS DAS CATEGORIAS */
+body > h2 {
+    font-size: 1.5rem;
+    margin: 30px 5% 18px;
+    padding-left: 14px;
+    border-left: 5px solid var(--amarelo);
+    color: var(--azul);
+}
+
+/* CATÁLOGO */
+.container-produtos {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+
+    padding: 0 5%;
+    margin-bottom: 35px;
+    align-items: stretch;
+}
+
+/* CARD */
+.produto {
+    min-width: 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    background: var(--fundo-card);
+
+    border: 1px solid var(--borda);
+    border-radius: 12px;
+    overflow: hidden;
+
+    box-shadow: 0 5px 20px rgba(16, 45, 80, 0.10);
+
+    transition: 0.3s;
+}
+
+.produto:hover {
+    transform: translateY(-5px);
+    background: var(--fundo-card-hover);
+
+    box-shadow: 0 10px 25px rgba(16, 45, 80, 0.16);
+}
+
+/* IMAGENS */
+.produto > img {
+    display: block;
+    width: 100%;
+    height: 250px;
+
+    object-fit: contain;
+    object-position: center;
+
+    background: #F1F5FA;
+    border-bottom: 1px solid var(--borda);
+}
+
+/* TÍTULO DO LIVRO */
+.produto > h2 {
+    font-size: 1rem;
+    line-height: 1.4;
+    margin: 12px 13px 7px;
+    color: var(--azul);
+}
+
+/* AUTOR */
+.autor {
+    color: #315B83;
+    font-size: 0.82rem;
+    font-weight: 600;
+    margin: 0 13px 10px;
+}
+
+/* DESCRIÇÃO */
+.descricao {
+    color: var(--texto-secundario);
+    font-size: 0.80rem;
+    line-height: 1.55;
+
+    margin: 0 13px 12px;
+
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    line-clamp: 4;
+    overflow: hidden;
+}
+
+/* PREÇO */
+.preco {
+    color: var(--azul);
+    font-size: 1.15rem;
+    font-weight: 800;
+
+    margin: auto 13px 12px;
+    padding-top: 5px;
+}
+
+/* BOTÃO COMPRAR */
+.produto > button {
+    margin: 0 13px 10px;
+    padding: 10px 12px;
+
+    background: var(--amarelo);
+    color: var(--azul);
+
+    border: none;
+    border-radius: 7px;
+
+    font-size: 0.85rem;
+    font-weight: 800;
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.produto > button:hover {
+    background: #E8B900;
+    transform: translateY(-2px);
+}
+
+.produto > button:active {
+    transform: scale(0.98);
+}
+
+/* CARRINHO */
+.carrinho {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 13px 12px;
+}
+
+.carrinho button {
+    width: 40px;
+    height: 38px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: var(--azul);
+    color: white;
+
+    border: none;
+    border-radius: 8px;
+
+    font-size: 1.15rem;
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.carrinho button:hover {
+    background: #315B83;
+    transform: scale(1.08);
+}
+
+/* ACESSIBILIDADE */
+button:focus-visible {
+    outline: 3px solid var(--amarelo);
+    outline-offset: 3px;
+}
+
+/* NOTEBOOKS E TABLETS */
+@media (max-width: 1100px) {
+    .container-produtos {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+    }
+
+    .produto > img {
+        height: 230px;
+    }
+}
+
+/* CELULARES */
+@media (max-width: 760px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 16px 5%;
+    }
+
+    header nav {
+        gap: 18px;
+    }
+
+    .container-produtos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 13px;
+    }
+
+    body > h2 {
+        margin-top: 25px;
+    }
+
+    .produto > img {
+        height: 200px;
+    }
+
+    .produto > h2 {
+        font-size: 0.95rem;
+        margin: 11px 10px 6px;
+    }
+
+    .autor {
+        margin: 0 10px 8px;
+    }
+
+    .descricao {
+        margin: 0 10px 10px;
+        font-size: 0.78rem;
+    }
+
+    .preco {
+        margin: auto 10px 10px;
+    }
+
+    .produto > button {
+        margin: 0 10px 9px;
+        padding: 10px 7px;
+    }
+
+    .carrinho {
+        padding: 0 10px 10px;
+    }
+}
+
+/* CELULARES PEQUENOS */
+@media (max-width: 420px) {
+    .container-produtos {
+        grid-template-columns: 1fr;
+        padding: 0 7%;
+        gap: 18px;
+    }
+
+    .produto > img {
+        height: 260px;
+    }
+}
+
+/* MENOS ANIMAÇÕES */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+}
+
+.botoes-carrossel {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    padding: 0 5%;
+    margin-bottom: 5px;
+}
+
+.botoes-carrossel button {
+    width: 42px;
+    height: 42px;
+    margin: 0;
+
+    background: #102D50;
+    color: #FFFFFF;
+
+    border: none;
+    border-radius: 50%;
+
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.botoes-carrossel button:hover {
+    background: #FFD43B;
+    color: #102D50;
+}
+.avaliacao {
+  color: gold;
+  font-size: 22px;
+}
+.botoes {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}

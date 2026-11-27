@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIBLIOTEC - Início</title>
+    <link rel="stylesheet" href="../bibliotec/css/inicio.css">
+    <link rel="stylesheet" href="../bibliotec/css/header.css">
+    <link rel="stylesheet" href="../bibliotec/css/footer.css">
+</head>
+<body>
+    <header>
+     <h1>BIBLIOTEC<span>✦</span></h1>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="catalogo.html">Catálogo</a>
+            <a href="carrinho.html">Carrinho</a>
+        </nav>
+    </header>
+    <h2>Campeão de vendas</h2>
+<div class="botoes-carrossel">
+    <button onclick="moverCarrossel(this, -1)">❮</button>
+    <button onclick="moverCarrossel(this, 1)">❯</button>
+</div>
+    <div class="container-produtos">
+        <div class="produto">
+            <img
+             src="../bibliotec/assets/pequenoprincipe.jpg" 
+             alt="Capa do livro O Pequeno Príncipe"
+             loading="lazy"
+             >
+            <h2>Pequeno Principe</h2>
+            <p class="autor">
+                Antoine de Saint-Exupéry
+            </p>
+            <p class="descricao">
+                O Pequeno Príncipe é uma fábula filosófica e poética escrita por Antoine de Saint-Exupéry em 1943.
+                 A obra conta a história de um piloto que sofre uma pane e cai no deserto do Saara,
+                  onde conhece um menino loiro e misterioso que veio de um pequeno asteroide (o B-612).
+            </p>
+            <p class="preco">
+                R$ 38,90
+            </p>
+            <button>Compre aqui</button>
+            <p class="avaliacao">
+                ⭐⭐⭐⭐⭐ <span>(5/5)</span>
+            </p>
+            <div class="carrinho">
+                <button>🛒</button>
+            </div>
+        </div>
+        <div class="produto">
+            <img 
+            src="../bibliotec/assets/jack.jpg" 
+            alt="Capa do Livro O estranho mundo de Jack"
+            loading="lazy"
+            >
+            <h2>O Estranho Mundo de Jack</h2>
+            <p class="autor">
+                Sally Morgan
+            </p>
+            <p class="descricao">
+                A história de O Estranho Mundo de Jack (The Nightmare Before Christmas)
+                 acompanha Jack Esqueleto, o amado Rei das Abóboras da Cidade do Halloween,
+                  que fica entediado com a rotina de assustar pessoas. Ao encontrar portais para outras festividades,
+                   ele descobre a Cidade do Natal e decide sequestrar o Papai Noel para assumir o seu lugar
+            </p>
+            <p class="preco">
+                R$ 79,90
+            </p>
+            <button>Compre aqui</button>
+            <p class="avaliacao">
+                ⭐⭐⭐⭐⭐ <span>(5/5)</span>
+            </p>
+            <div class="carrinho">
+                <button>🛒</button>
+            </div>
+        </div>
+
+        <div id="meuBotao"class="produto" onclick="abrirLivro()" style="cursor: pointer;">
+            <img 
+            src="../bibliotec/assets/coraline.jpg" 
+            alt="Capa do livro Coraline"
+            loading="lazy"
+            >
+            <h2>Coraline</h2>
+            <p class="autor">
+                Neil Gaiman
+            </p>
+            <p class="descricao">
+                Escrito por Neil Gaiman, Coraline acompanha uma menina curiosa
+                 que se muda com os pais para um casarão antigo. Ao abrir uma porta
+                  misteriosa, ela descobre um mundo paralelo onde vivem cópias dos seus
+                   pais com botões negros no lugar dos olhos, que tentam prendê-la para sempre
+            </p>
+            <p class="preco">
+                R$ 54,90
+            </p>
+            <button >Compre aqui</button>
+            <p class="avaliacao">
+                ⭐⭐⭐⭐⭐ <span>(5/5)</span>
+            </p>
+            <div class="carrinho">
+                <button>🛒</button>
+            </div>
+
+        </div>
+
+        <div class="produto">
+            <img 
+            src="../bibliotec/assets/arvore.jpg" 
+            alt="Capa do livro A arvore da verdade"
+            loading="lazy"
+            >
+            <h2>A arvore da mentira</h2>
+            <p class="autor">
+                Frances Hardinge
+            </p>
+            <p class="descricao">
+                A Árvore da Mentira (The Lie Tree), escrito pela premiada autora britânica
+                 Frances Hardinge, é um romance que mistura ficção histórica,
+                  mistério e realismo fantástico.
+            </p>
+            <p class="preco">
+                R$ 32,80
+            </p>
+            <button>Compre aqui</button>
+            <p class="avaliacao">
+                ⭐⭐⭐⭐⭐ <span>(5/5)</span>
+            </p>
+            <div class="carrinho">
+                <button>🛒</button>
+            </div>
+        </div>
+    </div>
+    <h2>Populares</h2>
+<div class="botoes-carrossel">
+    <button onclick="moverCarrossel(this, -1)">❮</button>
+    <button onclick="moverCarrossel(this, 1)">❯</button>
+</div>
+    <div class="container-produtos">
+        <div class="produto">
+            <img
+             src="../bibliotec/assets/harry.jpg" 
+             alt="Capa do livro HarryPotter"
+             loading="lazy"
+             >
+            <h2>Harry Potter e a pedra filosofal</h2>
+            <p class="autor">
+                J.K. Roling
+            </p>
+            <p class="descricao">
+                Harry Potter descobre aos 11 anos que é um bruxo.
+                 Resgatado por Hagrid, ele vai para a Escola de Magia
+                  e Bruxaria de Hogwarts, faz amizade com Rony e Hermione,
+                   e impede que Lord Voldemort recupere sua forma física ao tentar
+                    roubar a lendária Pedra Filosofal.
+            </p>
+            <p class="preco">
+                R$ 51,90
+            </p>
+            <button>Compre aqui</button>
+            <p class="avaliacao">
+                ⭐⭐⭐⭐⭐ <span>(5/5)</span>
+            </p>
+            <div class="carrinho">
+                <button>🛒</button>
+            </div>
+        </div>
+
+        <div class="produto">
+            <img 
+            src="../bibliotec/assets/crepusculo.jpg" 
+            alt="Capa do Livro Crepúsculo"
+            loading="lazy"
+            >
+            <h2>Crepúsculo</h2>
+            <p class="autor">
+                Stephenie Meyer
+            </p>
+            <p class="descricao">
+                A história de Crepúsculo acompanha Bella Swan, uma adolescente que se muda
+                 para a chuvosa cidade de Forks para viver com o pai. Ela se apaixona por Edward Cullen,
+                  um colega de classe que é secretamente um vampiro. O romance enfrenta perigos quando
+                  outros vampiros tentam caçar Bella, enquanto o amigo Jacob Black lidera um grupo de lobisomens
+            </p>
+            <p class="preco">
+                R$ 37,90
+            </p>
+            <button>Compre aqui</button>
+            <p class="avaliacao">
+                ⭐⭐⭐⭐⭐ <span>(5/5)</span>
+            </p>
+            <div class="carrinho">
+                <button>🛒</button>
+            </div>
+        </div>
+
+        <div class="produto">
+            <img 
+            src="../bibliotec/assets/senhor.jpg" 
+            alt="Capa do livro O Senhor dos Aneis"
+            loading="lazy"
+            >
+            <h2>O senhor dos aneis</h2>
+            <p class="autor">
+                J.R.R Tolkien
+            </p>
+            <p class="descricao">
+                A obra épica O Senhor dos Anéis, escrita por J.R.R. Tolkien,
+                 é dividida em três volumes principais que contam a jornada
+                  para destruir o Um Anel e derrotar o Senhor Sombrio Sauron na Terra-média.
+            </p>
+            <p class="preco">
+                R$ 64,90
+            </p>
+            <button>Compre aqui</button>
+            <p class="avaliacao">
+                ⭐⭐⭐⭐⭐ <span>(5/5)</span>
+            </p>
+            <div class="carrinho">
+                <button>🛒</button>
+            </div>
+
+        </div>
+
+        <div class="produto">
+            <img 
+            src="../bibliotec/assets/Narnia.jpg" 
+            alt="Capa do livro As Crônicas de Nárnia"
+            loading="lazy"
+            >
+            <h2>As Crônicas de Nárnia</h2>
+            <p class="autor">
+                C.S. Lewis
+            </p>
+            <p class="descricao">
+                As Crônicas de Nárnia é uma série de sete livros de fantasia escrita por C.S. Lewis,
+                 publicada entre 1950 e 1956. A série segue as aventuras de crianças que entram no mundo mágico de Nárnia através de uma porta secreta em uma casa antiga.
+                 Frances Hardinge, é um romance que mistura ficção histórica,
+                  mistério e realismo fantástico.
+            </p>
+            <p class="preco">
+                R$ 42,90
+            </p>
+            <button>Compre aqui</button>
+            <p class="avaliacao">
+                ⭐⭐⭐⭐⭐ <span>(5/5)</span>
+            </p>
+            <div class="carrinho">
+                <button>🛒</button>
+            </div>
+        </div>
+    </div>
+    <h2>Terror</h2>
+<div class="botoes-carrossel">
+    <button onclick="moverCarrossel(this, -1)">❮</button>
+    <button onclick="moverCarrossel(this, 1)">❯</button>
+</div>
+    <div class="container-produtos">
+        <div class="produto">
+            <img
+             src="../bibliotec/assets/iluminado.jpg" 
+             alt="Capa do livro Iluminado"
+             loading="lazy"
+             >
+            <h2>O Iluminado</h2>
+            <p class="autor">
+                Stephen King
+            </p>
+            <p class="descricao">
+                O Iluminado é um romance de terror psicológico escrito por Stephen King.
+                 A história segue Danny Torrance, um menino com habilidades sobrenaturais,
+                  que se muda para um hotel isolado onde enfrenta forças maléficas.
+            </p>
+            <p class="preco">
+                R$ 49,90
+            </p>
+            <button>Compre aqui</button>
+            <p class="avaliacao">
+                ⭐⭐⭐⭐⭐ <span>(5/5)</span>
+            </p>
+            <div class="carrinho">
+                <button>🛒</button>
+            </div>
+        </div>
+
+        <div class="produto">
+            <img 
+            src="../bibliotec/assets/it.jpg" 
+            alt="Capa do Livro It"
+            loading="lazy"
+            >
+            <h2>It a coisa</h2>
+            <p class="autor">
+                Stephen King
+            </p>
+            <p class="descricao">
+                A história de It acompanha uma grupo de crianças em um pequeno vilarejo chamado Derry,
+                 onde vivem com medo de uma entidade maléfica que se manifesta principalmente em forma de um palhaço.
+                 para a chuvosa cidade de Forks para viver com o pai. Ela se apaixona por Edward Cullen,
+                  um colega de classe que é secretamente um vampiro. O romance enfrenta perigos quando
+                  outros vampiros tentam caçar Bella, enquanto o amigo Jacob Black lidera um grupo de lobisomens
+            </p>
+            <p class="preco">
+                R$ 37,90
+            </p>
+            <button>Compre aqui</button>
+            <p class="avaliacao">
+                ⭐⭐⭐⭐⭐ <span>(5/5)</span>
+            </p>
+            <div class="carrinho">
+                <button>🛒</button>
+            </div>
+        </div>
+
+        <div class="produto">
+            <img 
+            src="../bibliotec/assets/exorcista.jpg" 
+            alt="Capa do livro O Exorcista"
+            loading="lazy"
+            >
+            <h2>O Exorcista</h2>
+            <p class="autor">
+                William Peter Blatty
+            </p>
+            <p class="descricao">
+                O Exorcista é um romance de terror escrito por William Peter Blatty,
+                 que conta a história de um menino possuído por uma entidade demoníaca.
+            </p>
+            <p class="preco">
+                R$ 59,90
+            </p>
+            <button>Compre aqui</button>
+            <p class="avaliacao">
+                ⭐⭐⭐⭐⭐ <span>(5/5)</span>
+            </p>
+            <div class="carrinho">
+                <button>🛒</button>
+            </div>
+
+        </div>
+
+        <div class="produto">
+            <img 
+            src="../bibliotec/assets/Amigo.jpg" 
+            alt="Capa do livro Amigo imaginário"
+            loading="lazy"
+            >
+            <h2>Amigo imaginário</h2>
+            <p class="autor">
+                Stephen Chbosky
+            </p>
+            <p class="descricao">
+                Amigo Imaginário é um romance de suspense psicológico escrito por Stephen Chbosky.
+                 A história acompanha um menino chamado Christopher, que se muda para uma nova cidade
+                  e cria um amigo imaginário chamado "Imaginary Friend". No entanto, à medida que a história se desenrola,
+                   Christopher começa a perceber que seu amigo imaginário pode ter intenções sinistras e que há algo mais sombrio acontecendo em sua vida.
+            </p>
+            <p class="preco">
+                R$ 67,30
+            </p>
+            <button>Compre aqui</button>
+            <p class="avaliacao">
+                ⭐⭐⭐⭐⭐ <span>(5/5)</span>
+            </p>
+            <div class="carrinho">
+                <button>🛒</button>
+            </div>
+        </div>
+    </div>
+    <h2>Romance</h2>
+<div class="botoes-carrossel">
+    <button onclick="moverCarrossel(this, -1)">❮</button>
+    <button onclick="moverCarrossel(this, 1)">❯</button>
+</div>
+    <div class="container-produtos">
+        <div class="produto">
+            <img
+             src="../bibliotec/assets/estrelas.jpg" 
+             alt="Capa do livro A culpa é das estrelas"
+             loading="lazy"
+             >
+            <h2>A culpa é das estrelas</h2>
+            <p class="autor">
+                John Green
+            </p>
+            <p class="descricao">
+                A culpa é das estrelas é um romance de drama e romance escrito por John Green.
+                 A história acompanha dois jovens amantes, Starr e Khalil, que enfrentam desafios em suas vidas.
+            </p>
+            <p class="preco">
+                R$ 39,90
+            </p>
+            <button>Compre aqui</button>
+            <p class="avaliacao">
+                ⭐⭐⭐⭐⭐ <span>(5/5)</span>
+            </p>
+            <div class="carrinho">
+                <button>🛒</button>
+            </div>
+        </div>
+
+        <div class="produto">
+            <img 
+            src="../bibliotec/assets/AntesDeVoce.jpg" 
+            alt="Capa do Livro Como eu era antes de Você"
+            loading="lazy"
+            >
+            <h2>Como eu era antes de Você</h2>
+            <p class="autor">
+                Jojo Moyes
+            </p>
+            <p class="descricao">
+                Como Eu Era Antes de Você é um romance de drama e romance escrito por Jojo Moyes.
+                 A história acompanha Louisa Clark, uma jovem que se torna cuidadora de Will Traynor,
+                  um homem tetraplégico que perdeu a vontade de viver após um acidente. À medida que eles se conhecem,
+                   desenvolvem uma conexão profunda, enfrentando desafios emocionais e questionando o significado da vida e do amor.
+            </p>
+            <p class="preco">
+                R$ 49,90
+            </p>
+            <button>Compre aqui</button>
+            <p class="avaliacao">
+                ⭐⭐⭐⭐⭐ <span>(5/5)</span>
+            </p>
+            <div class="carrinho">
+                <button>🛒</button>
+            </div>
+        </div>
+
+        <div class="produto">
+            <img 
+            src="../bibliotec/assets/Orgulho.jpg" 
+            alt="Capa do livro Orgulho e Preconceito"
+            loading="lazy"
+            >
+            <h2>Orgulho e Preconceito</h2>
+            <p class="autor">
+                Jane Austen
+            </p>
+            <p class="descricao">
+                Orgulho e Preconceito é um romance de drama e romance escrito por Jane Austen.
+                 A história acompanha Elizabeth Bennet, uma jovem inteligente e independente, que enfrenta desafios sociais e amorosos em uma época em que o casamento era frequentemente visto como um meio de melhorar a posição social.
+            </p>
+            <p class="preco">
+                R$ 59,90
+            </p>
+            <button>Compre aqui</button>
+            <p class="avaliacao">
+                ⭐⭐⭐⭐⭐ <span>(5/5)</span>
+            </p>
+            <div class="carrinho">
+                <button>🛒</button>
+            </div>
+
+        </div>
+
+        <div class="produto">
+            <img 
+            src="../bibliotec/assets/ParaTodosQueJaAmei.jpg" 
+            alt="Capa do livro Para todos os garotos que já amei"
+            loading="lazy"
+            >
+            <h2>Para todos os garotos que já amei</h2>
+            <p class="autor">
+                Jenny Han
+            </p>
+            <p class="descricao">
+                Para todos os garotos que já amei é um romance de drama e romance escrito por Jenny Han.
+                 A história acompanha uma jovem chamada Mai, que se envolve em uma relação complicada com um garoto chamado Theo.
+            </p>
+            <p class="preco">
+                R$ 39,90
+            </p>
+            <button>Compre aqui</button>
+            <p class="avaliacao">
+                ⭐⭐⭐⭐⭐ <span>(5/5)</span>
+            </p>
+            <div class="carrinho">
+                <button>🛒</button>
+            </div>
+        </div>
+    </div>
+<footer class="rodape">
+    <p class="copyright">
+        &copy; 2026 Bibliotec. Todos os direitos reservados.
+    </p>
+</footer>
+<script src="../bibliotec/js/inicio.js"></script>
+</body>
+</html>

@@ -1,0 +1,165 @@
+
+/* CONFIGURAÇÕES GERAIS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+    color: #102D50;
+}
+
+/* CONTEÚDO PRINCIPAL */
+main {
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px auto;
+}
+
+main h2 {
+    font-size: 30px;
+    margin-bottom: 30px;
+    color: #102D50;
+}
+
+/* LISTA DE ITENS */
+.itens-carrinho {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* CARD DE CADA LIVRO */
+.item-carrinho {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease;
+}
+
+.item-carrinho:hover {
+    transform: translateY(-3px);
+}
+
+/* IMAGEM DO LIVRO */
+.item-carrinho img {
+    width: 110px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+/* INFORMAÇÕES DO LIVRO */
+.item-carrinho div {
+    flex: 1;
+}
+
+.item-carrinho h3 {
+    font-size: 21px;
+    margin-bottom: 10px;
+    color: #102D50;
+}
+
+.item-carrinho p {
+    font-size: 15px;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.item-carrinho p:last-child {
+    font-size: 18px;
+    font-weight: bold;
+    color: #173f70;
+}
+
+/* BOTÃO REMOVER */
+.remover-item {
+    background-color: #c0392b;
+    color: white;
+    border: none;
+    padding: 11px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s;
+}
+
+.remover-item:hover {
+    background-color: #922b21;
+}
+
+/* RESUMO DO CARRINHO */
+.resumo-carrinho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    margin-top: 30px;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.resumo-carrinho h3 {
+    font-size: 24px;
+    color: #102D50;
+}
+
+/* BOTÃO LIMPAR CARRINHO */
+.resumo-carrinho button {
+    background-color: #FFD43B;
+    color: #102D50;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.resumo-carrinho button:hover {
+    background-color: #e6bd25;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 600px) {
+    main {
+        width: 95%;
+        margin: 25px auto;
+    }
+
+    .item-carrinho {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .item-carrinho img {
+        width: 85px;
+        height: 120px;
+    }
+
+    .item-carrinho h3 {
+        font-size: 17px;
+    }
+
+    .remover-item {
+        width: 100%;
+    }
+
+    .resumo-carrinho {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .resumo-carrinho button {
+        width: 100%;
+    }
+}

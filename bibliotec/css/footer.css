@@ -1,0 +1,57 @@
+
+/* FOOTER */
+
+.rodape {
+    width: 100%;
+    min-height: 80px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 25px 20px;
+    margin-top: 55px;
+
+    background-color: #173f70;
+    border-top: 4px solid #FFD43B;
+
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.rodape p {
+    color: #FFFFFF;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* CELULARES */
+@media (max-width: 480px) {
+    .rodape {
+        padding: 22px 15px;
+    }
+
+    .rodape p {
+        font-size: 12px;
+    }
+}
+html, body {
+    min-height: 100%;
+    margin: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+footer {
+    margin-top: auto;
+}
